@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio – Nguyễn Xuân Hải</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress"></div>
+
+<header class="header">
+  <a href="#home" class="logo">XH.dev</a>
+  <button id="menuBtn" class="menu-btn" aria-label="Mở menu" aria-expanded="false">☰</button>
+  <nav id="nav" class="nav">
+    <a href="#about">Giới thiệu</a>
+    <a href="#skills">Kỹ năng</a>
+    <a href="#projects">Dự án</a>
+    <a href="#contact">Liên hệ</a>
+  </nav>
+  <button id="themeBtn" class="theme-btn" aria-label="Đổi giao diện sáng/tối">🌙</button>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <p class="hello">Xin chào, mình là</p>
+    <h1>Nguyễn Xuân Hải</h1>
+    <p class="typing">Sinh viên <span id="typed"></span><span class="cursor">|</span></p>
+    <a href="#projects" class="btn">Xem dự án</a>
+  </section>
+
+  <section id="about" class="section reveal">
+    <h2>Giới thiệu</h2>
+    <div class="about">
+      <div class="avatar"></div>
+      <p>Mình là sinh viên năm 2 ngành AIoT tại Học viện Công nghệ Bưu chính Viễn thông(PTIT). </p>
+    </div>
+  </section>
+
+  <section id="skills" class="section reveal">
+    <h2>Kỹ năng</h2>
+    <ul class="skills">
+      <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Git &amp; GitHub</li><li>Responsive Design</li><li>Python cơ bản</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section reveal">
+    <h2>Dự án</h2>
+    <input id="search" class="search" type="search" placeholder="Tìm dự án theo từ khóa…" aria-label="Tìm dự án">
+    <div class="tags" id="tags">
+      <button class="tag active" data-tag="all">Tất cả</button>
+      <button class="tag" data-tag="web">Web</button>
+      <button class="tag" data-tag="js">JavaScript</button>
+      <button class="tag" data-tag="python">Python</button>
+    </div>
+    <div class="grid" id="grid">
+      <article class="card" data-tags="web">
+        <h3>Trang giới thiệu quán cà phê</h3>
+        <p>Website tĩnh giới thiệu thực đơn và địa chỉ quán, bố cục bằng Grid.</p>
+        <span class="chip">HTML</span><span class="chip">CSS</span>
+      </article>
+      <article class="card" data-tags="web js">
+        <h3>Ứng dụng danh sách việc cần làm</h3>
+        <p>Thêm, xóa, đánh dấu hoàn thành công việc và lưu lại trong trình duyệt.</p>
+        <span class="chip">JavaScript</span><span class="chip">LocalStorage</span>
+      </article>
+      <article class="card" data-tags="python">
+        <h3>Quản lý điểm sinh viên</h3>
+        <p>Chương trình dòng lệnh nhập điểm, tính điểm trung bình và xếp loại.</p>
+        <span class="chip">Python</span>
+      </article>
+      <article class="card" data-tags="web js">
+        <h3>Máy tính bỏ túi</h3>
+        <p>Máy tính có phép toán cơ bản, hỗ trợ bàn phím và giao diện tối.</p>
+        <span class="chip">JavaScript</span><span class="chip">CSS</span>
+      </article>
+    </div>
+    <p id="empty" class="empty" hidden>Không tìm thấy dự án phù hợp. Hãy thử từ khóa khác.</p>
+  </section>
+
+  <section id="contact" class="section reveal">
+    <h2>Liên hệ</h2>
+    <form id="form" class="form" novalidate>
+      <label>Họ tên
+        <input type="text" id="name" placeholder="Ví dụ: Trần Văn B">
+        <small class="err" id="nameErr"></small>
+      </label>
+      <label>Email
+        <input type="email" id="email" placeholder="ban@example.com">
+        <small class="err" id="emailErr"></small>
+      </label>
+      <label>Số điện thoại
+        <input type="tel" id="phone" placeholder="0901234567">
+        <small class="err" id="phoneErr"></small>
+      </label>
+      <label>Lời nhắn
+        <textarea id="msg" rows="4" maxlength="200" placeholder="Bạn muốn nói gì với mình?"></textarea>
+        <small class="count"><span id="count">0</span>/200 ký tự</small>
+        <small class="err" id="msgErr"></small>
+      </label>
+      <button type="submit" class="btn">Gửi lời nhắn</button>
+      <p id="ok" class="ok" hidden>Đã gửi lời nhắn. Cảm ơn bạn!</p>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Nguyễn Xuân Hải. Bài thực hành 01 – Lập trình web.</p>
+  <button id="topBtn" class="top-btn" aria-label="Lên đầu trang">↑</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
