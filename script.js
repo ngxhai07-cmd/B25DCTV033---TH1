@@ -25,7 +25,7 @@ themeBtn.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' 
 $('#year').textContent = new Date().getFullYear();
 
 /* 4. Hiệu ứng gõ chữ */
-const words = ['Công nghệ thông tin', 'yêu thích Front-end', 'đam mê lập trình web'];
+const words = ['AIoT', 'yêu thích Front-end', 'đam mê lập trình web'];
 let w = 0, c = 0, del = false;
 function type() {
   const word = words[w];
